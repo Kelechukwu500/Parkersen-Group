@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import img3 from "../../assets/HSE.jpg";
+import img3 from "../../assets/hse.jpg"; 
 
 const SustainabilityCard3 = ({ refProp, inView }) => (
   <motion.div
