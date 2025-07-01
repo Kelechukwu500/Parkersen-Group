@@ -1,5 +1,6 @@
-import React, { useRef, lazy, Suspense } from "react";
+import React, { useRef } from "react";
 import { useInView } from "framer-motion";
+import { motion } from "framer-motion"; // ✅ motion imported
 import {
   FaBuilding,
   FaGlobeAfrica,
@@ -7,7 +8,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 
-const HeroFeatureCard = lazy(() => import("./HeroFeatureCard"));
+import HeroFeatureCard from "./HeroFeatureCard"; // direct import only
 
 const cards = [
   {
@@ -58,23 +59,24 @@ const HeroFeatures = () => {
   const isInView = useInView(sectionRef, { once: true });
 
   return (
-    <section
+    <motion.section
       ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1, ease: "easeOut" }}
       className="bg-gradient-to-b from-black via-yellow-400 to-black text-white py-24 px-6"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Suspense fallback={<div className="text-white">Loading...</div>}>
-          {cards.map((card, index) => (
-            <HeroFeatureCard
-              key={index}
-              card={card}
-              index={index}
-              isInView={isInView}
-            />
-          ))}
-        </Suspense>
+        {cards.map((card, index) => (
+          <HeroFeatureCard
+            key={index}
+            card={card}
+            index={index}
+            isInView={isInView}
+          />
+        ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

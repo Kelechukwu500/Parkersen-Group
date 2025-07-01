@@ -4,10 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import image from "../assets/Background.jpg";
 
-// Lazy load HeroFeatures for code splitting
 const HeroFeatures = lazy(() => import("./HeroFeatures"));
 
-// Carousel Images
 import img1 from "../assets/Background15.jpg";
 import img2 from "../assets/Background24.jpg";
 import img3 from "../assets/Background20.jpg";
@@ -20,7 +18,9 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const carouselRef = useRef(null);
+  const cardRef = useRef(null);
   const carouselInView = useInView(carouselRef, { once: true });
+  const cardInView = useInView(cardRef, { once: true });
 
   const carouselImages = [
     {
@@ -76,15 +76,14 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative text-white mt-[160px] h-screen overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom right, #000000, #facc15, #000000)",
-          }}
-        ></div>
-
+      {/* ✅ WRAPPER WITH GRADIENT BACKGROUND AND BACKGROUND IMAGE */}
+      <div
+        className="relative text-white mt-[120px] pb-20 overflow-hidden"
+        style={{
+          background: "linear-gradient(to bottom, #000000, #facc15, #000000)",
+        }}
+      >
+        {/* ✅ Background Image outside section so it covers entire wrapper */}
         <img
           src={image}
           alt="Background"
@@ -92,70 +91,83 @@ const Hero = () => {
           style={{ transform: `scale(${scale})`, zIndex: 0, opacity: 0.3 }}
         />
 
-        <div className="container mx-auto px-5 py-16 md:py-24 relative z-10 h-full flex flex-col md:flex-row items-center justify-between">
-          <div className="w-full md:w-1/2">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-black drop-shadow-md">
-              Innovation in Partnership <br />
-              <span className="text-yellow-500">Advancing Together</span>
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-gray-800 font-medium">
-              We deliver modern construction, civil infrastructure, and
-              engineering excellence with innovation, expertise, and trusted
-              delivery.
+        <section className="relative h-screen">
+          <div className="container mx-auto px-5 py-16 md:py-24 relative z-10 h-full flex flex-col md:flex-row items-center justify-between">
+            {/* LEFT */}
+            <div className="w-full md:w-1/2 mt-[-40px]">
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-black drop-shadow-md">
+                Innovation in Partnership <br />
+                <span className="text-yellow-500">Advancing Together</span>
+              </h1>
+              <p className="mt-4 text-lg md:text-xl text-gray-800 font-medium">
+                We deliver modern construction, civil infrastructure, and
+                engineering excellence with innovation, expertise, and trusted
+                delivery.
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link to="/projects">
+                  <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
+                    Projects
+                  </button>
+                </Link>
+                <Link to="/contact-us">
+                  <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="w-full md:w-2/5 mt-[-50px] md:mt-[-40px]">
+              <div className="bg-black/60 backdrop-blur-md text-white rounded-xl p-8 shadow-2xl">
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">
+                  Why Choose Us?
+                </h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">✓</span> Innovative
+                    engineering & modern tech
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">✓</span>{" "}
+                    Professional, certified construction experts
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-2">✓</span> Quality
+                    assurance with timely delivery
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ✅ Motion Card Included in same wrapper as background image */}
+        <motion.div
+          ref={cardRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={cardInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full px-4 -mt-10 md:-mt-16 z-10 relative"
+        >
+          <div className="max-w-4xl mx-auto bg-black/70 text-white p-6 rounded-xl shadow-2xl backdrop-blur-sm border border-yellow-400">
+            <h3 className="text-2xl font-semibold text-yellow-400 mb-3">
+              Building & Construction Excellence
+            </h3>
+            <p className="text-sm md:text-base leading-relaxed">
+              Parker Integrated Engineering Limited is a leading building and
+              construction company, delivering superior infrastructure,
+              architectural innovation, and sustainable development solutions
+              across Nigeria. We merge technical excellence with proven project
+              delivery to shape environments and empower communities.
             </p>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link to="/projects">
-                <button className="bg-white-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
-                  Projects
-                </button>
-              </Link>
-              <Link to="/contact-us">
-                <button className="border border-white text-white hover:bg-white hover:text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
-                  Contact Us
-                </button>
-              </Link>
-            </div>
           </div>
+        </motion.div>
+      </div>
 
-          <div className="w-full md:w-2/5 mt-12 md:mt-0">
-            <div className="bg-black/60 backdrop-blur-md text-white rounded-xl p-8 shadow-2xl">
-              <h2 className="text-2xl font-semibold mb-6 text-yellow-400">
-                Why Choose Us?
-              </h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">✓</span> Innovative
-                  engineering & modern tech
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">✓</span> Professional,
-                  certified construction experts
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-400 mr-2">✓</span> Quality
-                  assurance with timely delivery
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            viewBox="0 0 1440 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              fill="#ffffff"
-            />
-          </svg>
-        </div>
-      </section>
-
-      {/* Suspense wrapper for lazy HeroFeatures */}
+      {/* HERO FEATURES */}
       <Suspense
         fallback={
           <div className="text-white text-center py-8">Loading Features...</div>
@@ -164,10 +176,10 @@ const Hero = () => {
         <HeroFeatures />
       </Suspense>
 
+      {/* CAROUSEL */}
       <section
-        className={`w-screen overflow-hidden mt-20 ${
-          isFullscreen ? "fixed inset-0 z-50 bg-black" : ""
-        }`}
+        className={`className="w-full h-full object-cover transition-opacity duration-700"
+ ${isFullscreen ? "fixed inset-0 z-50 bg-black" : ""}`}
       >
         <motion.div
           ref={carouselRef}
@@ -183,7 +195,6 @@ const Hero = () => {
               className="w-full h-[80vh] object-cover transition-opacity duration-700"
             />
 
-            {/* Centered Animated Caption */}
             <motion.div
               key={currentImage}
               initial={{ opacity: 0, y: 30 }}

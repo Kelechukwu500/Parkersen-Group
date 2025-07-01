@@ -18,6 +18,7 @@ const subsidiaries = [
       "On-site Logistics & Delivery Services",
     ],
     image: bentechImage,
+    link: "https://weatherappdis.onrender.com",
   },
   {
     name: "ChallyMore Ventures",
@@ -30,6 +31,7 @@ const subsidiaries = [
       "Post-construction Space Revamp",
     ],
     image: challymoreImage,
+    link: "https://apple-store-egs0.onrender.com",
   },
 ];
 
@@ -81,9 +83,15 @@ const GroupProductsServices = () => {
 
                   {/* Website Button */}
                   <div className="text-left">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-6 py-2 rounded-lg shadow-md transition">
-                      Website
-                    </button>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-black-400 hover:bg-yellow-500 text-white font-bold px-6 py-2 rounded-lg shadow-md transition">
+                        Website
+                      </button>
+                    </a>
                   </div>
                 </motion.div>
               </div>
@@ -106,7 +114,7 @@ const GroupProductsServices = () => {
         {/* Contact Us Button */}
         <div className="mt-10 text-center">
           <Link to="/contact-us">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
+            <button className="bg-black-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
               Contact Us
             </button>
           </Link>

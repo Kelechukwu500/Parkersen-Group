@@ -21,13 +21,13 @@ const Navbar = () => {
     <>
       <nav className="bg-white shadow-md fixed top-0 w-full z-50">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center h-40">
+          <div className="flex justify-between items-center h-30">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <img
                 src={image}
                 alt="Logo"
-                className="h-40 w-80 object-contain rounded-full shadow-md"
+                className="h-30 w-80 object-contain rounded-full "
               />
             </div>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
 
               <button
                 onClick={toggleMenu}
-                className="text-white border border-white p-2 rounded-md"
+                className="text-black bg-white border border-white p-2 rounded-md"
               >
                 {isOpen ? <X size={33} /> : <Menu size={33} />}
               </button>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Sliding Menu */}
         <div
-          className={`fixed top-[160px] right-0 h-[calc(100%-160px)] w-1/4 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[120px] right-0 h-[calc(100%-120px)] w-1/3 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

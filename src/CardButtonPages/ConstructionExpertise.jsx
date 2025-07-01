@@ -58,7 +58,7 @@ const ConstructionExpertise = () => {
                   ref={imageRef}
                   src={item.image}
                   alt={item.title}
-                  className="w-full md:w-1/3 rounded-xl shadow-lg"
+                  className="w-full md:w-[400px] h-[300px] object-cover rounded-xl shadow-lg"
                   initial={{ opacity: 0, x: -50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -96,7 +96,7 @@ const ConstructionExpertise = () => {
         {/* Contact Button */}
         <div className="mt-10 text-center">
           <Link to="/contact-us">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
+            <button className="bg-black-500 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
               Contact Us
             </button>
           </Link>

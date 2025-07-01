@@ -140,7 +140,7 @@ const InvestorRelations = () => {
             to guide our operations with transparency and innovation.
           </p>
           <Link to="/board-of-directors">
-            <button className="mt-6 px-5 py-2 bg-yellow-500 text-white rounded shadow font-semibold">
+            <button className="mt-6 px-5 py-2 bg-black-500 text-white rounded shadow font-semibold">
               Board of Directors
             </button>
           </Link>
@@ -157,7 +157,7 @@ const InvestorRelations = () => {
             Solving Your Construction Needs with Innovation
           </p>
           <Link to="/contact-us">
-            <button className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition">
+            <button className="px-6 py-3 bg-black-500 text-white font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition">
               Contact Us
             </button>
           </Link>

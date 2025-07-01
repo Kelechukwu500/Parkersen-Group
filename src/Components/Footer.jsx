@@ -16,14 +16,6 @@ const Footer = () => {
 
   return (
     <footer className="w-screen relative -mt-4 text-white overflow-hidden">
-      {/* Interception line (diagonal white cut) */}
-      <div
-        className="absolute -top-10 left-0 w-full h-24 bg-white z-10"
-        style={{
-          clipPath: "polygon(0 100%, 100% 0%, 100% 100%, 0% 100%)",
-        }}
-      ></div>
-
       {/* Background gradient */}
       <div className="absolute top-0 left-0 w-full h-full z-0 bg-gradient-to-br from-black via-yellow-500 to-black"></div>
 
@@ -33,7 +25,7 @@ const Footer = () => {
           {/* Left: Copyright */}
           <div className="text-sm">
             © {new Date().getFullYear()} Parkersen Group. <br />
-            All rights reserved.
+            All rights reserved. Created by Kaycee Tech.
           </div>
 
           {/* Center: Page Links (pushed down) */}
@@ -100,7 +92,7 @@ const Footer = () => {
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-yellow-500 hover:bg-yellow-600 text-black p-3 rounded-full shadow-lg transition duration-300"
+          className="fixed bottom-6 right-6 bg-black-500 hover:bg-yellow-600 text-white p-3 rounded-full shadow-lg transition duration-300"
           aria-label="Back to top"
         >
           <ChevronUp size={20} />

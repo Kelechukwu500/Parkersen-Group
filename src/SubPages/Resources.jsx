@@ -35,7 +35,7 @@ const ResourceCard = ({ title, desc, index }) => {
       </div>
       <Link
         to={getRoutePath(title)}
-        className="mt-auto w-fit px-4 py-2 border border-black text-black rounded hover:bg-black hover:text-white transition duration-300"
+        className="mt-auto w-fit px-4 py-2 border border-black text-black rounded hover:bg-white hover:text-white transition duration-300"
       >
         View Details
       </Link>

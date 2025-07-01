@@ -45,7 +45,7 @@ const Sustainability = () => {
               in our projects, planning, and partnerships.
             </p>
             <Link to="/policies/sustainability-report">
-              <button className="bg-yellow-400 text-white font-bold px-6 py-2 rounded-lg">
+              <button className="bg-black-500 text-white font-bold px-6 py-2 rounded-lg">
                 Sustainability Report 2023
               </button>
             </Link>
@@ -104,7 +104,7 @@ const Sustainability = () => {
               minimize risks while maintaining operational efficiency.
             </p>
             <Link to="/policies/hse-policy">
-              <button className="bg-yellow-400 text-white font-bold px-6 py-2 rounded-lg">
+              <button className="bg-black-500 text-white font-bold px-6 py-2 rounded-lg">
                 HSE Policy
               </button>
             </Link>
@@ -182,7 +182,7 @@ const Sustainability = () => {
         {/* Contact Us Button */}
         <div className="text-center mt-10">
           <Link to="/contact-us">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
+            <button className="bg-black-500 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition">
               Contact Us
             </button>
           </Link>
