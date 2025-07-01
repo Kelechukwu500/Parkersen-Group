@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Image1 from "../assets/Background16.jpg";
 import Image2 from "../assets/Background20.jpg";
-import Image3 from "../assets/Background18.jpg";
+import Image3 from "../assets/Background24.jpg";
 import Image4 from "../assets/Background26.jpg";
 
 const BuildingConstruction = () => {

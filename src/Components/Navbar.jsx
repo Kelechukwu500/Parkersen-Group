@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Sliding Menu */}
         <div
-          className={`fixed top-[120px] right-0 h-[calc(100%-120px)] w-1/3 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[120px] right-0 h-[calc(100%-120px)] w-1/2 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

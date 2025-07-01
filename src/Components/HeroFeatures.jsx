@@ -37,7 +37,7 @@ const cards = [
     stats: ["Health", "Education"],
     description:
       "Member of Council for the Regulation of Engineering in Nigeria (COREN)",
-    button: "SAFETY & SUSTAINABILITY",
+    button: "SAFETY & ENVIROMENTAL SUSTAINABILITY",
     route: "/sustainability",
   },
   {
@@ -49,7 +49,7 @@ const cards = [
       "120 employees group-wide",
     ],
     description: "*2024 Audited Consolidated & Separate Financial Statements",
-    button: "INVESTOR RELATIONS",
+    button: "INVESTOR RELATIONS & ENGAGEMENT",
     route: "/investor-relations",
   },
 ];

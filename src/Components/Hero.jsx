@@ -76,14 +76,12 @@ const Hero = () => {
 
   return (
     <>
-      {/* ✅ WRAPPER WITH GRADIENT BACKGROUND AND BACKGROUND IMAGE */}
       <div
         className="relative text-white mt-[120px] pb-20 overflow-hidden"
         style={{
           background: "linear-gradient(to bottom, #000000, #facc15, #000000)",
         }}
       >
-        {/* ✅ Background Image outside section so it covers entire wrapper */}
         <img
           src={image}
           alt="Background"
@@ -92,7 +90,7 @@ const Hero = () => {
         />
 
         <section className="relative h-screen">
-          <div className="container mx-auto px-5 py-16 md:py-24 relative z-10 h-full flex flex-col md:flex-row items-center justify-between">
+          <div className="container mx-auto px-5 py-16 md:py-24 relative z-10 h-full flex flex-col md:flex-row items-center justify-between gap-y-12 md:gap-y-0">
             {/* LEFT */}
             <div className="w-full md:w-1/2 mt-[-40px]">
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-black drop-shadow-md">
@@ -105,22 +103,25 @@ const Hero = () => {
                 delivery.
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link to="/projects">
-                  <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
-                    Projects
-                  </button>
-                </Link>
-                <Link to="/contact-us">
-                  <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
-                    Contact Us
-                  </button>
-                </Link>
+              {/* BUTTONS */}
+              <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to="/projects">
+                    <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
+                      Projects
+                    </button>
+                  </Link>
+                  <Link to="/contact-us">
+                    <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
+                      Contact Us
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* RIGHT */}
-            <div className="w-full md:w-2/5 mt-[-50px] md:mt-[-40px]">
+            <div className="w-full md:w-2/5 mt-10 md:mt-[-40px]">
               <div className="bg-black/60 backdrop-blur-md text-white rounded-xl p-8 shadow-2xl">
                 <h2 className="text-2xl font-semibold mb-6 text-yellow-400">
                   Why Choose Us?
@@ -144,27 +145,22 @@ const Hero = () => {
           </div>
         </section>
 
-        {/* ✅ Motion Card Included in same wrapper as background image */}
+        {/* Motion Card */}
         <motion.div
           ref={cardRef}
           initial={{ opacity: 0, y: 50 }}
           animate={cardInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full px-4 -mt-10 md:-mt-16 z-10 relative"
-        >
-          <div className="max-w-4xl mx-auto bg-black/70 text-white p-6 rounded-xl shadow-2xl backdrop-blur-sm border border-yellow-400">
-            <h3 className="text-2xl font-semibold text-yellow-400 mb-3">
-              Building & Construction Excellence
-            </h3>
-            <p className="text-sm md:text-base leading-relaxed">
-              Parker Integrated Engineering Limited is a leading building and
-              construction company, delivering superior infrastructure,
-              architectural innovation, and sustainable development solutions
-              across Nigeria. We merge technical excellence with proven project
-              delivery to shape environments and empower communities.
-            </p>
-          </div>
-        </motion.div>
+          className="w-full px-4 mt-10 md:-mt-16 z-10 relative"
+        />
+      </div>
+
+      {/* FULLSCREEN VIDEO SECTION */}
+      <div className="w-full h-screen">
+        <video controls className="w-full h-full object-cover">
+          <source src="/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       {/* HERO FEATURES */}
@@ -179,7 +175,7 @@ const Hero = () => {
       {/* CAROUSEL */}
       <section
         className={`className="w-full h-full object-cover transition-opacity duration-700"
- ${isFullscreen ? "fixed inset-0 z-50 bg-black" : ""}`}
+          ${isFullscreen ? "fixed inset-0 z-50 bg-black" : ""}`}
       >
         <motion.div
           ref={carouselRef}
@@ -194,7 +190,6 @@ const Hero = () => {
               alt={`Slide ${currentImage + 1}`}
               className="w-full h-[80vh] object-cover transition-opacity duration-700"
             />
-
             <motion.div
               key={currentImage}
               initial={{ opacity: 0, y: 30 }}
@@ -204,7 +199,6 @@ const Hero = () => {
             >
               {carouselImages[currentImage].caption}
             </motion.div>
-
             <button
               onClick={handlePrev}
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition"
@@ -217,7 +211,6 @@ const Hero = () => {
             >
               <ChevronRight size={24} />
             </button>
-
             <div className="absolute bottom-3 w-full flex justify-center gap-2">
               {carouselImages.map((_, idx) => (
                 <button
@@ -229,7 +222,6 @@ const Hero = () => {
                 ></button>
               ))}
             </div>
-
             <button
               onClick={toggleFullscreen}
               className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-3 py-1 rounded-md text-sm shadow"
