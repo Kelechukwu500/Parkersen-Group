@@ -11,7 +11,13 @@ import Image8 from "../assets/Background22.jpg";
 import Image9 from "../assets/Background23.jpg";
 import Image10 from "../assets/Background25.jpg";
 import Image11 from "../assets/Background27.jpg";
-import Image12 from "../assets/Background19.jpg"; // Add this final image
+import Image12 from "../assets/Background19.jpg";
+import Image13 from "../assets/Bridge2.jpg";
+import Image14 from "../assets/Road1.jpg";
+import Image15 from "../assets/Road3.jpg";
+import Image16 from "../assets/Bridge1.jpg";
+import Image17 from "../assets/RoadGutter.jpg";
+import Image18 from "../assets/Road4.jpg";
 
 const ProjectGallery = () => {
   const ref = React.useRef(null);
@@ -30,9 +36,15 @@ const ProjectGallery = () => {
     Image10,
     Image11,
     Image12,
+    Image13,
+    Image14,
+    Image15,  
+    Image16,
+    Image17,
+    Image18,
   ];
 
-  const galleryItems = Array.from({ length: 12 }, (_, i) => ({
+  const galleryItems = Array.from({ length: 18 }, (_, i) => ({
     caption: `Gallery Image ${i + 1}`,
     image: images[i],
   }));

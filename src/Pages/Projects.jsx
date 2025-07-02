@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Example image placeholders – replace with your real images
 import img1 from "../assets/Background14.jpg";
 import img2 from "../assets/Background15.jpg";
 import img3 from "../assets/Background10.jpg";
@@ -15,6 +14,14 @@ import img9 from "../assets/Background5.jpg";
 import img10 from "../assets/Background7.jpg";
 import img11 from "../assets/Background11.jpg";
 import img12 from "../assets/Background6.jpg";
+import img13 from "../assets/Road1.jpg";
+import img14 from "../assets/Road3.jpg";
+import img15 from "../assets/Bridge1.jpg";
+import img16 from "../assets/Bridge2.jpg";
+import img17 from "../assets/NPA6.jpg";
+import img18 from "../assets/NPA2.jpg";
+import img19 from "../assets/RoadGutter.jpg";
+import img20 from "../assets/Road4.jpg";
 
 const projects = [
   {
@@ -88,6 +95,54 @@ const projects = [
     image: img12,
     description:
       "In Ogbaku, Mbaitoli LGA of Imo State, Parker Integrated Services delivered a tastefully designed private luxury bungalow for a diaspora client—seamlessly combining elegance, comfort, and modern architectural excellence.",
+  },
+  {
+    location: "Ikwerre Road, Port Harcourt, Rivers State",
+    image: img13,
+    description:
+      "We completed a major road construction project along Ikwerre Road, improving transportation flow and ensuring durable pavement quality for both commuters and heavy-duty traffic.",
+  },
+  {
+    location: "Yenagoa Expressway, Bayelsa State",
+    image: img14,
+    description:
+      "Another road project handled with precision and speed, expanding commuter access and strengthening surface grading in Bayelsa State.",
+  },
+  {
+    location: "Isheagu–Ogbonogodo Bridge, Delta State",
+    image: img15,
+    description:
+      "This bridge construction featured deep-pile foundations and precast deck segments to enable uninterrupted access to remote communities in Delta State.",
+  },
+  {
+    location: "Eket Bridge, Akwa Ibom State",
+    image: img16,
+    description:
+      "Bridge reconstruction in Eket enhanced flood resilience and allowed safer passage for both pedestrians and vehicles across critical river points.",
+  },
+  {
+    location: "NPA Compound, Port Harcourt, Rivers State",
+    image: img17,
+    description:
+      "Reinforcement of Nigerian Port Authority compound floor using heavy-grade concrete and steel mesh to support container loads and vehicle movement.",
+  },
+  {
+    location: "Secondary Reinforcement – NPA, Port Harcourt",
+    image: img18,
+    description:
+      "Further reinforcement within the NPA compound ensured structural durability and high-performance flooring for industrial logistics operations.",
+  },
+  {
+    location: "Kirikiri Industrial Layout, Lagos State",
+    image: img19,
+    description:
+      "Road construction with advanced drainage systems was completed in Kirikiri to prevent erosion and enhance industrial zone accessibility.",
+  },
+  {
+    location: "Elekahia Road, Port Harcourt, Rivers State",
+    image: img20,
+    description:
+      "Our team executed another strategic road construction project with emphasis on surfacing and stormwater channeling to reduce flood impact.",
   },
 ];
 

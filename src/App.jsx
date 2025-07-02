@@ -29,6 +29,7 @@ import Blog from "./SubPages/Blog";
 import DataProtection from "./FooterPages/DataProtection";
 import Career from "./FooterPages/Career";
 import SiteMap from "./FooterPages/SiteMap";
+import Consultancy from "./FooterPages/Consultancy";
 
 
 //Card Button Pages
@@ -119,6 +120,7 @@ const App = () => {
         <Route path="/blog/4" element={<Blog4 />} />
         <Route path="/blog/5" element={<Blog5 />} />
         <Route path="/blog/6" element={<Blog6 />} />
+        <Route path="/consultancy" element={<Consultancy />} />
         
         {/* Card Button Pages */}
 

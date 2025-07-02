@@ -21,7 +21,9 @@ const Sitemap = () => {
     "Search",
     "Sitemap",
     "Career",
-    "Contact Form"
+    "Contact Form",
+    "Consultancy",
+    "Blog",
   ];
 
   return (

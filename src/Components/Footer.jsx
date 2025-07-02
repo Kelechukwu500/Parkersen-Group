@@ -30,8 +30,8 @@ const Footer = () => {
 
           {/* Center: Page Links (pushed down) */}
           <div className="flex flex-col text-sm space-y-2 text-center md:text-left mt-4">
-            <Link to="/contact-form" className="text-white hover:underline">
-              Contact
+            <Link to="/consultancy" className="text-white hover:underline">
+              Book a Consultation
             </Link>
             <Link to="/data-protection" className="text-white hover:underline">
               Data Protection

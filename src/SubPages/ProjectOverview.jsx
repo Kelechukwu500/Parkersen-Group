@@ -12,6 +12,15 @@ import Image9 from "../assets/Background11.jpg";
 import Image10 from "../assets/Background9.jpg";
 import Image11 from "../assets/Background8.jpg";
 import Image12 from "../assets/Background3.jpg";
+import Image13 from "../assets/Bridge2.jpg";
+import Image14 from "../assets/Road1.jpg";
+import Image15 from "../assets/Road3.jpg";
+import Image16 from "../assets/Bridge1.jpg";
+import Image17 from "../assets/RoadGutter.jpg";
+import Image18 from "../assets/Road4.jpg";
+import Image19 from "../assets/NPA1.jpg";
+import Image20 from "../assets/NPA6.jpg";
+import Image21 from "../assets/NPA3.jpg";
 
 const ProjectOverview = () => {
   const ref = React.useRef(null);
@@ -30,11 +39,20 @@ const ProjectOverview = () => {
     Image10,
     Image11,
     Image12,
+    Image13,
+    Image14,
+    Image15,
+    Image16,
+    Image17,
+    Image18,
+    Image19,
+    Image20,
+    Image21,
   ];
 
-  const projects = Array.from({ length: 12 }, (_, i) => ({
+  const projects = Array.from({ length: 21 }, (_, i) => ({
     title: `Project ${i + 1}`,
-    description: `This is a summary of Project ${
+    description: `Insight into the Project ${
       i + 1
     }. We executed it with excellence and attention to detail.`,
     image: images[i],
