@@ -9,25 +9,27 @@ const Navbar = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
-  const [newsOpen, setNewsOpen] = useState(false); // News submenu
+  const [newsOpen, setNewsOpen] = useState(false);
+  const [hireOpen, setHireOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleAbout = () => setAboutOpen(!aboutOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleProjects = () => setProjectsOpen(!projectsOpen);
-  const toggleNews = () => setNewsOpen(!newsOpen); // Toggle news/blog
+  const toggleNews = () => setNewsOpen(!newsOpen);
+  const toggleHire = () => setHireOpen(!hireOpen);
 
   return (
     <>
       <nav className="bg-white shadow-md fixed top-0 w-full z-50">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center h-30">
+          <div className="flex justify-between items-center h-25">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <img
                 src={image}
                 alt="Logo"
-                className="h-30 w-80 object-contain rounded-full "
+                className="h-25 w-80 object-contain rounded-full "
               />
             </div>
 
@@ -59,7 +61,7 @@ const Navbar = () => {
 
         {/* Sliding Menu */}
         <div
-          className={`fixed top-[120px] right-0 h-[calc(100%-120px)] w-1/2 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[106px] right-0 h-[calc(100%-106px)] w-1/2 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -198,7 +200,30 @@ const Navbar = () => {
               )}
             </li>
 
-            {/* News & Blog (New Collapsible) */}
+            {/* Hire Services */}
+            <li>
+              <button
+                onClick={toggleHire}
+                className="w-full flex justify-between items-center"
+              >
+                Hire Services {hireOpen ? <ChevronDown /> : <ChevronRight />}
+              </button>
+              {hireOpen && (
+                <ul className="mt-3 ml-4 space-y-4 text-base font-medium">
+                  <li>
+                    <Link
+                      to="/hire-professionals"
+                      onClick={() => setIsOpen(false)}
+                      className="hover:text-yellow-400"
+                    >
+                      Construction Professionals
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            {/* News & Blog */}
             <li>
               <button
                 onClick={toggleNews}
@@ -208,9 +233,6 @@ const Navbar = () => {
               </button>
               {newsOpen && (
                 <ul className="mt-3 ml-4 space-y-4 text-base font-medium">
-                  <li>
-                    
-                  </li>
                   <li>
                     <Link
                       to="/blog"

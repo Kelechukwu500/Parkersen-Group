@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Consultancy = () => {
   const ref = useRef(null);
@@ -92,6 +93,16 @@ const Consultancy = () => {
         ))}
       </motion.div>
 
+      {/* Consult Now Button */}
+      <div className="text-center mt-16">
+        <Link
+          to="/consultancy-form"
+          className="inline-block bg-gray-500 text-white font-bold px-6 py-3 rounded-md hover:bg-yellow-400 transition duration-300"
+        >
+          Consult Now
+        </Link>
+      </div>
+
       {/* Contact & Social */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -108,7 +119,7 @@ const Consultancy = () => {
         </div>
         <div className="flex justify-center gap-4 items-center mb-8 text-lg">
           <FaPhoneAlt className="text-yellow-300" />
-          <a href="tel:+2348012345678" className="underline">
+          <a href="tel:+2349035415114" className="underline">
             +234 903 541 5114
           </a>
         </div>

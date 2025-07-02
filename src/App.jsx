@@ -23,6 +23,8 @@ import StructuralEngineering from "./SubPages/StructuralEngineering";
 import ProjectOverview from "./SubPages/ProjectOverview";
 import ProjectGallery from "./SubPages/ProjectGallery";
 import Blog from "./SubPages/Blog";
+import HireProfessionals from "./SubPages/HireProfessionals";
+import HireNowForm from "./SubPages/HireNowForm";
 
 
 //Footer Pages
@@ -30,6 +32,7 @@ import DataProtection from "./FooterPages/DataProtection";
 import Career from "./FooterPages/Career";
 import SiteMap from "./FooterPages/SiteMap";
 import Consultancy from "./FooterPages/Consultancy";
+import ConsultancyForm from "./FooterPages/ConsultancyForm";
 
 
 //Card Button Pages
@@ -121,6 +124,9 @@ const App = () => {
         <Route path="/blog/5" element={<Blog5 />} />
         <Route path="/blog/6" element={<Blog6 />} />
         <Route path="/consultancy" element={<Consultancy />} />
+        <Route path="/hire-professionals" element={<HireProfessionals />} />
+        <Route path="/consultancy-form" element={<ConsultancyForm />} />
+        <Route path="/hire-now-form" element={<HireNowForm />} />
         
         {/* Card Button Pages */}
 
