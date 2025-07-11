@@ -117,7 +117,6 @@ const HireNowForm = () => {
           <input
             type="date"
             name="startDate"
-            placeholder="Start Date"
             className="w-full px-4 py-2 bg-white text-black border-b border-gray-400 focus:outline-none focus:border-yellow-500"
             value={formData.startDate}
             onChange={handleChange}
