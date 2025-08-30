@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import image1 from "../assets/charles1.jpg";
+import image2 from "../assets/ambrose1.jpg";
 
 const directors = [
   {
@@ -7,14 +9,14 @@ const directors = [
     position: "Chief Executive Officer",
     description:
       "With a visionary mindset and a wealth of experience in engineering and corporate leadership, Mr. Charles Agbakahi has led Parker Integrated Engineering LTD to become a respected force in the construction industry. His strategic foresight, commitment to quality, and unwavering drive for innovation have been pivotal in delivering landmark projects across Nigeria. As CEO, he inspires a culture of excellence, integrity, and sustainability.",
-    image: "https://via.placeholder.com/300x300", // Placeholder image
+    image: image1,
   },
   {
     name: "Mr. Ambrose Uzokwe",
     position: "Executive Director",
     description:
       "Mr. Ambrose Uzokwe brings a rich background in project execution and operational leadership. As Executive Director, he ensures that Parker Integrated Engineering LTD’s projects are executed efficiently and to the highest standards. His attention to detail, dedication to client satisfaction, and hands-on approach have made him a key pillar in the company’s growth and success.",
-    image: "https://via.placeholder.com/300x300", // Placeholder image
+    image: image2,
   },
 ];
 
@@ -23,7 +25,7 @@ const BoardOfDirectors = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="min-h-screen px-4 py-20 bg-gradient-to-b from-black via-yellow-400 to-black text-white">
+    <section className="min-h-screen px-4 py-28 mt-20 bg-gradient-to-b from-black via-yellow-400 to-black text-white">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-yellow-400">Directors</h2>
       </div>
@@ -37,13 +39,17 @@ const BoardOfDirectors = () => {
             initial={{ opacity: 0, y: 60 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: index * 0.3 }}
-            className="bg-black/70 text-white rounded-2xl shadow-xl overflow-hidden"
+            className="bg-black/50 text-white rounded-2xl shadow-xl overflow-hidden"
           >
-            <img
-              src={director.image}
-              alt={director.name}
-              className="w-full h-72 object-cover"
-            />
+            {/* Image wrapper where you can adjust size */}
+            <div className="image-container w-full h-50 overflow-hidden">
+              <img
+                src={director.image}
+                alt={director.name}
+                className="w-full h-full object-fill object-center rounded-t-2xl"
+              />
+            </div>
+
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-yellow-400">
                 {director.name}
