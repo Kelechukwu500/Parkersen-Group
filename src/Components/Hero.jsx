@@ -97,7 +97,7 @@ const Hero = () => {
                 Innovation in Partnership <br />
                 <span className="text-yellow-500">Advancing Together</span>
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-800 font-medium">
+              <p className="mt-4 text-lg md:text-xl text-white font-medium">
                 We deliver modern construction, civil infrastructure, and
                 engineering excellence with innovation, expertise, and trusted
                 delivery.
