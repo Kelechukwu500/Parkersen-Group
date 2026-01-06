@@ -28,8 +28,8 @@ const Footer = () => {
             All rights reserved. Created by Kaycee Tech.
           </div>
 
-          {/* Center: Page Links (pushed down) */}
-          <div className="flex flex-col text-sm space-y-2 text-center md:text-left mt-4">
+          {/* Center: Page Links */}
+          <div className="flex flex-col text-sm space-y-2 text-center md:text-left">
             <Link to="/consultancy" className="text-white hover:underline">
               Book a Consultation
             </Link>
