@@ -68,7 +68,7 @@ const HireProfessionals = () => {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-4xl font-bold text-center mb-4 mt-24">
           Hire Top-Tier Construction Professionals – Anytime, Anywhere
         </h2>
         <p className="text-center text-lg mb-10 max-w-3xl mx-auto">

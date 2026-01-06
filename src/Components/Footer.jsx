@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Center: Page Links */}
-          <div className="flex flex-col text-sm space-y-2 text-center md:text-left">
+          <div className="flex flex-col text-sm space-y-2 text-left mt-4">
             <Link to="/consultancy" className="text-white hover:underline">
               Book a Consultation
             </Link>

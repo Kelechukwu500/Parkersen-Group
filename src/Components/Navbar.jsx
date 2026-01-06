@@ -29,7 +29,7 @@ const Navbar = () => {
               <img
                 src={image}
                 alt="Logo"
-                className="h-25 w-80 object-contain rounded-full "
+                className="h-25 w-45 object-contain rounded-full "
               />
             </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
 
         {/* Sliding Menu */}
         <div
-          className={`fixed top-[106px] right-0 h-[calc(100%-106px)] w-1/2 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[50px] right-0 h-[calc(100%-106px)] w-1/2 bg-black z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
