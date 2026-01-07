@@ -77,7 +77,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="relative text-white mt-[60px] md:mt-[108px] pb-20 overflow-hidden"
+        className="relative text-white mt-0 md:mt-0 pb-20 overflow-hidden"
         style={{
           background: "linear-gradient(to bottom, #000000, #facc15, #000000)",
         }}
@@ -107,12 +107,13 @@ const Hero = () => {
               <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/projects">
-                    <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg">
+                    <button className="inline-flex items-center justify-center bg-black text-white font-semibold h-12 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all duration-300">
                       Projects
                     </button>
                   </Link>
+
                   <Link to="/contact-us">
-                    <button className="bg-black-500 hover:bg-white-600 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
+                    <button className="inline-flex items-center justify-center bg-black text-white font-semibold h-12 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all duration-300">
                       Contact Us
                     </button>
                   </Link>
