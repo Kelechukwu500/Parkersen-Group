@@ -77,7 +77,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="relative text-white mt-0 md:mt-0 pb-20 overflow-hidden"
+        className="relative text-white mt-8 md:mt-0 pb-20 overflow-hidden"
         style={{
           background: "linear-gradient(to bottom, #000000, #facc15, #000000)",
         }}
