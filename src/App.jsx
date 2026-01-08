@@ -83,6 +83,8 @@ const App = () => {
   return (
     <>
       <Navbar />
+
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -155,6 +157,7 @@ const App = () => {
         />
         {/* Add more routes as needed */}
       </Routes>
+    
       <Footer />
     </>
   );
